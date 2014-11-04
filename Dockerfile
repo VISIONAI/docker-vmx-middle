@@ -12,6 +12,6 @@ WORKDIR /vmx
 RUN \ 
   wget http://files.vision.ai/releases/middle/middle.linux-stable.tar.gz
 
-RUN  cd middle && tar zxfv ../middle.linux.tar.gz 
+RUN  cd middle && tar zxfv ../middle.linux-stable.tar.gz 
 
 VOLUME /vmx/middle
