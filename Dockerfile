@@ -10,8 +10,8 @@ RUN mkdir -p /vmx/middle
 WORKDIR /vmx
 
 RUN \ 
-  wget http://files.vision.ai/releases/middle/middle.linux-stable.tar.gz
+  wget http://files.vision.ai/releases/middle/middle.linux-latest.tar.gz
 
-RUN  cd middle && tar zxfv ../middle.linux-stable.tar.gz 
+RUN  cd middle && tar zxfv ../middle.linux-latest.tar.gz 
 
 VOLUME /vmx/middle
