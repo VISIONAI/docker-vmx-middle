@@ -1,17 +1,12 @@
-FROM ubuntu
-
-RUN \ 
-  apt-get update && apt-get install -y wget tar
-
+FROM busybox
 
 RUN mkdir -p /vmx/middle
-
-
 WORKDIR /vmx
 
 RUN \ 
-  wget http://files.vision.ai/releases/middle/middle.linux-master.tar.gz
-
-RUN  cd middle && tar zxfv ../middle.linux-master.tar.gz 
+  wget http://files.vision.ai/releases/middle/middle.linux-master.tar.gz && \
+  cd middle && \                                                         
+  gzip -d ../middle.linux-master.tar.gz && \
+  tar xf ../middle.linux-master.tar 
 
 VOLUME /vmx/middle
