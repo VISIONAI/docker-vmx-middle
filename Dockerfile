@@ -8,6 +8,7 @@ RUN \
   cd middle && \                                                         
   gzip -d ../middle.linux-master.tar.gz && \
   tar xf ../middle.linux-master.tar && \
+  rm ../middle.linux-master.tar && \
   echo "Version is " `cat version`
 
 VOLUME /vmx/middle
