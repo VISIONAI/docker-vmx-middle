@@ -4,11 +4,11 @@ RUN mkdir -p /vmx/middle
 WORKDIR /vmx
 
 RUN \ 
-  wget -q http://files.vision.ai/releases/middle/middle.linux-master.tar.gz && \
+  wget -q https://files.vision.ai/vmx/VMXmiddle/Linux/VMXmiddle_Linux.latest.tar.gz && \
   cd middle && \                                                         
-  gzip -d ../middle.linux-master.tar.gz && \
-  tar xf ../middle.linux-master.tar && \
-  rm ../middle.linux-master.tar && \
+  gzip -d ../VMXmiddle_Linux.latest.tar.gz && \
+  tar xf ../VMXmiddle_Linux.latest.tar && \
+  rm ../VMXmiddle_Linux.latest.tar && \
   echo "Version is " `cat version`
 
 VOLUME /vmx/middle
